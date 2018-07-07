@@ -373,8 +373,8 @@ gulp.task('updatePackages', function (done) {
 
 gulp.task('rename', function ()  {
     var newname;
-    var author = '@@Author@@';
-    var email  = '@@email@@';
+    var author = 'Nico Bode';
+    var email  = 'n.node@intelligentes-haus.de';
     for (var a = 0; a < process.argv.length; a++) {
         if (process.argv[a] === '--name') {
             newname = process.argv[a + 1]
@@ -388,7 +388,7 @@ gulp.task('rename', function ()  {
 
     console.log('Try to rename to "' + newname + '"');
     if (!newname) {
-        console.log('Please write the new template name, like: "gulp rename --name mywidgetset" --author "Author Name"');
+        console.log('Please write the new fibaro name, like: "gulp rename --name mywidgetset" --author "Author Name"');
         process.exit();
     }
     if (newname.indexOf(' ') !== -1) {
@@ -399,43 +399,43 @@ gulp.task('rename', function ()  {
         console.log('Name must be lower case.');
         process.exit();
     }
-    if (fs.existsSync(__dirname + '/admin/template.png')) {
-        fs.renameSync(__dirname + '/admin/template.png',              __dirname + '/admin/' + newname + '.png');
+    if (fs.existsSync(__dirname + '/admin/fibaro.png')) {
+        fs.renameSync(__dirname + '/admin/fibaro.png',              __dirname + '/admin/' + newname + '.png');
     }
-    if (fs.existsSync(__dirname + '/widgets/template.html')) {
-        fs.renameSync(__dirname + '/widgets/template.html',           __dirname + '/widgets/' + newname + '.html');
+    if (fs.existsSync(__dirname + '/widgets/fibaro.html')) {
+        fs.renameSync(__dirname + '/widgets/fibaro.html',           __dirname + '/widgets/' + newname + '.html');
     }
-    if (fs.existsSync(__dirname + '/widgets/template/js/template.js')) {
+    if (fs.existsSync(__dirname + '/widgets/fibaro/js/fibaro.js')) {
         if (!fs.existsSync(__dirname + '/widgets/' + newname + '/')) {
             fs.mkdirSync(__dirname + '/widgets/' + newname + '/');
         }
         if (!fs.existsSync(__dirname + '/widgets/' + newname + '/js/')) {
             fs.mkdirSync(__dirname + '/widgets/' + newname + '/js/');
         }        
-        fs.renameSync(__dirname + '/widgets/template/js/template.js', __dirname + '/widgets/' + newname + '/js/' + newname + '.js');
+        fs.renameSync(__dirname + '/widgets/fibaro/js/fibaro.js', __dirname + '/widgets/' + newname + '/js/' + newname + '.js');
     }
-    if (fs.existsSync(__dirname + '/widgets/template')) {
-        fs.renameSync(__dirname + '/widgets/template',                __dirname + '/widgets/' + newname);
+    if (fs.existsSync(__dirname + '/widgets/fibaro')) {
+        fs.renameSync(__dirname + '/widgets/fibaro',                __dirname + '/widgets/' + newname);
     }
     var patterns = [
         {
-            match: /ioBroker template Adapter/g,
+            match: /fibaro/g,
             replacement: newname
         },
         {
-            match: /template/g,
+            match: /fibaro/g,
             replacement: newname
         },
         {
-            match: /Template/g,
-            replacement: newname ? (newname[0].toUpperCase() + newname.substring(1)) : 'Template'
+            match: /Fibaro/g,
+            replacement: newname ? (newname[0].toUpperCase() + newname.substring(1)) : 'Fibaro'
         },
         {
-            match: /@@Author@@/g,
+            match: /Nico Bode/g,
             replacement: author
         },
         {
-            match: /@@email@@/g,
+            match: /n.node@intelligentes-haus.de/g,
             replacement: email
         }
     ];
