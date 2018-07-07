@@ -1,52 +1,52 @@
 {
-    "common": {
-        "name": "fibaro",
-        "version": "0.0.1",
-        "news": {
-            "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version",
-                "ru": "Первоначальный адаптер",
-                "pt": "Versão inicial",
-                "fr": "Version initiale",
-                "nl": "Eerste release"
-            }
-        },
+	"common": {
+		"name": "fibaro",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial adapter",
+				"de": "Initiale Version",
+				"ru": "Первоначальный адаптер",
+				"pt": "Versão inicial",
+				"fr": "Version initiale",
+				"nl": "Eerste release"
+			}
+		},
 		"title": "Fibaro Adapter",
-        "titleLang": {
-            "en": "Fibaro Adapter",
-            "de": "Fibaro Adapter"
-        },
-        "desc": {
-            "en": "ioBroker Fibaro Adapter",
-            "de": "ioBroker Fibaro Adapter",
-        },
-        "authors": [
-            "Nico Bode <n.node@intelligentes-haus.de>"
-        ],
-        "docs": {
-            "en": "docs/en/admin.md",
-            "de": "docs/de/admin.md",
-        },
-        "platform": "Javascript/Node.js",
-        "mode": "daemon",
-        "icon": "fibaro.png",
-        "materialize": true,
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/nicobode/ioBroker.fibaro/master/admin/fibaro.png",
-        "keywords": ["fibaro", "vis", "GUI", "graphical", "scada"],
-        "readme": "https://github.com/nicobode/ioBroker.fibaro/blob/master/README.md",
-        "loglevel": "info",
-        "type": "general",
-        "license": "MIT",
-        "messagebox": false
-    },
-    "native": {
-        "test1": true,
-        "test2": 42,
-        "mySelect": "auto"
-    },
-    "objects": [
+		"titleLang": {
+			"en": "Fibaro Adapter",
+			"de": "Fibaro Adapter"
+		},
+		"desc": {
+			"en": "ioBroker Fibaro Adapter",
+			"de": "ioBroker Fibaro Adapter"
+		},
+		"authors": [
+			"Nico Bode <n.node@intelligentes-haus.de>"
+		],
+		"docs": {
+			"en": "docs/en/admin.md",
+			"de": "docs/de/admin.md"
+		},
+		"platform": "Javascript/Node.js",
+		"mode": "daemon",
+		"icon": "fibaro.png",
+		"materialize": true,
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/nicobode/ioBroker.fibaro/master/admin/fibaro.png",
+		"keywords": ["fibaro", "vis", "GUI", "graphical", "scada"],
+		"readme": "https://github.com/nicobode/ioBroker.fibaro/blob/master/README.md",
+		"loglevel": "info",
+		"type": "general",
+		"license": "MIT",
+		"messagebox": false
+	},
+	"native": {
+		"test1": true,
+		"test2": 42,
+		"mySelect": "auto"
+	},
+	"objects": [
 
-    ]
+	]
 }
